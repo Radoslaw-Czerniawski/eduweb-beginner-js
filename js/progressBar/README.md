@@ -4,4 +4,4 @@ This is an exercise in creating a dynamic scrollbar that changes it's width depe
 
    *Progress: 0%*     |    *Progress: 49.2%*
 :-------------------------:|:-------------------------:
-![wat](screenshots/screen1.png)  |  ![wat](screenshots/screen2.png)
+![Screen 1](screenshots/screen1.png)  |  ![Screen 2](screenshots/screen2.png)
