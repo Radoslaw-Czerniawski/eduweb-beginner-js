@@ -18,5 +18,4 @@ window.addEventListener("scroll", () => {
     const scrolled = html.scrollTop / height * 100;
 
     progressInner.style.width = `${scrolled}%`;
-    console.log(scrolled);
 })
