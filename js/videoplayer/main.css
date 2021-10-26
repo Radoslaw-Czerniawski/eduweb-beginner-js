@@ -1,10 +1,16 @@
-.edu-player {
-
-}
-
 .edu-player video {
     display: block;
+    position: relative;
     width: 100%;
+}
+
+.edu-player__video span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    font-size: 5rem;
 }
 
 .edu-player__timeline {
