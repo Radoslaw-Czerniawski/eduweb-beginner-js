@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Simple Video Player</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Simple Video Player</h1>
+
+
+            <div class="edu-player" data-js-player>
+                <video src="https://space.eduweb.pl/files/assets/video.mp4"></video>
+
+                <div class="edu-player__timeline" data-js-timeline>
+                    <div class="edu-player__controls">
+                        <span class="icon">
+                            <i class="fas fa-play" data-js-play></i>
+                        </span>
+                    </div>
+                    <div class="edu-player__controls">
+                        <span data-js-time>00:00</span>
+                        <span data-js-duration>12:53</span>
+                    </div>
+                    <div class="edu-player__progress" data-js-progress></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
