@@ -1,6 +1,8 @@
+// This IIFE adds click event to the button and generates custom video player on the website
 (function () {
     const button = document.querySelector(".button");
 
+    //this function creates and imports a template string with html elements creating the videoplayer on the website
     function renderVideoPlayer() {
         const player = `
         <div class="edu-player__video">
@@ -33,6 +35,7 @@
         button.remove();
     };
 
+    //this function adds functionality to the custom controls of the videoplayer
     function createPlayer(container, src) {
         const video = container.querySelector("video");
         const timeline = container.querySelector("[data-js-timeline]");
@@ -42,6 +45,7 @@
         const duration = container.querySelector("[data-js-duration]");
         const progress = container.querySelector("[data-js-progress]");
 
+        //function converting video's duration from seconds into mm:ss format
         function secondsToTime(seconds) {
             return [seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60]
                 .map((v) => (v < 10 ? `0${parseInt(v, 10)}` : parseInt(v, 10)))
@@ -49,6 +53,7 @@
                 .join(":");
         }
 
+        //this function adds the pause/play button functionality
         function togglePlay(e) {
             e.stopPropagation();
 
@@ -65,21 +70,25 @@
             }
         }
 
+        //this function changes the text contet of a span element to display the correct video's duration
         function updateDuration(e) {
             duration.textContent = secondsToTime(e.currentTarget.duration);
         }
 
+        //this function changes the text contet of a span element to display the video's current time
         function updateTime(e) {
             time.textContent = secondsToTime(e.currentTarget.currentTime);
         }
 
+        //this function styles progress' bar width depending on the video's current time
         function updateProgress(e) {
             progress.style.width = `${e.currentTarget.currentTime / e.currentTarget.duration * 100}%`;
         }
 
+        //this function changes the video's current time depending on the place that had been clicked on the timeline by the user
         function setTime(e) {
-            const pos = e.currentTarget.getBoundingClientRect();
-            const left = e.pageX - pos.left;
+            const pos = e.currentTarget.getBoundingClientRect();  //
+            const left = e.pageX - pos.left; //current mouse pointer position minus the timer's left offset
             const percentage = left / pos.width;
 
             video.currentTime = video.duration * percentage;
