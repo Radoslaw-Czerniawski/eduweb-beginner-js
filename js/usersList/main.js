@@ -19,9 +19,9 @@ function renderTable(users) {
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Imię i nazwisko</th>
-                <th>Nazwa użytkownika</th>
-                <th>Adres e-mail</th>
+                <th>First Name and Last Name</th>
+                <th>Username</th>
+                <th>E-mail address</th>
             </tr>
         </thead>
         <tbody>
