@@ -21,6 +21,7 @@
             </div>
             <div class="edu-player__controls">
                 <span data-js-time>00:00</span>
+                <span>/</span>
                 <span data-js-duration>12:53</span>
             </div>
             <div class="edu-player__progress" data-js-progress></div>
